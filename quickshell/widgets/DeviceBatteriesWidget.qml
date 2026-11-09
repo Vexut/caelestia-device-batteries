@@ -68,7 +68,7 @@ Item {
     readonly property real textH: wide ? 26 : 0
     readonly property real cellW: (cardW - pad * 2 - gap * (cols - 1)) / cols
     readonly property real cellH: (cardH - pad * 2 - gap * (rows - 1)) / rows
-    readonly property real ringSize: Math.max(32, Math.min(cellW, cellH - textH) * 0.95)
+    readonly property real ringSize: Math.max(32, Math.min(cellW, cellH - textH) * 0.88)
 
     // Scroll (mouse wheel / touchpad) or swipe over the card to change pages.
     MouseArea {
