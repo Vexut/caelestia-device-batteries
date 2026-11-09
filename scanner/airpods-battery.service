@@ -1,0 +1,12 @@
+[Unit]
+Description=AirPods battery scanner (reads BLE advertisements, writes $XDG_RUNTIME_DIR/airpods-battery.json)
+After=bluetooth.target
+
+[Service]
+ExecStart=%h/.local/share/airpods-battery/venv/bin/python %h/.local/share/airpods-battery/airpods_battery.py
+Restart=on-failure
+RestartSec=5
+Nice=10
+
+[Install]
+WantedBy=default.target
